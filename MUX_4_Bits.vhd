@@ -1,0 +1,16 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY MUX_4_Bits IS
+PORT (
+ a1, a2: IN STD_LOGIC_VECTOR(3 DOWNTO 0 );
+ s: IN STD_LOGIC;
+ f: OUT STD_LOGIC_VECTOR(3 DOWNTO 0 )
+);
+END ENTITY;
+ARCHITECTURE circuit OF MUX_4_Bits IS
+BEGIN
+ 
+ f <= a1 when s = '0'  else a2;
+ 
+END ARCHITECTURE;

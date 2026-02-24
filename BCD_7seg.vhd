@@ -1,0 +1,21 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY BCD_7seg IS
+PORT (
+ A: IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+ SEG: OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
+);
+END ENTITY;
+ARCHITECTURE circuit OF BCD_7seg IS
+BEGIN
+ WITH A SELECT
+ SEG <=     "1111110" when "0000",
+				"0110000" when "0001",
+				"1101101" when "0010",
+				"1110011" when "0011",
+				"0011101" when "0100",
+				"1000111" when "0101",
+				"0000000" when others;
+ 
+END ARCHITECTURE;

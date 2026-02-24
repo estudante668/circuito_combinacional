@@ -1,0 +1,16 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY mux IS
+PORT (
+ a1, a2, s: IN STD_LOGIC;
+ f: OUT STD_LOGIC
+);
+END ENTITY;
+ARCHITECTURE circuit OF mux IS
+BEGIN
+ 
+ f <= a1 when s = '0';
+         else a2;
+ 
+END ARCHITECTURE;

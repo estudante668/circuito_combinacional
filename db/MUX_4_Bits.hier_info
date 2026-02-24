@@ -1,0 +1,19 @@
+|MUX_4_Bits
+a1[0] => f.DATAB
+a1[1] => f.DATAB
+a1[2] => f.DATAB
+a1[3] => f.DATAB
+a2[0] => f.DATAA
+a2[1] => f.DATAA
+a2[2] => f.DATAA
+a2[3] => f.DATAA
+s => f.OUTPUTSELECT
+s => f.OUTPUTSELECT
+s => f.OUTPUTSELECT
+s => f.OUTPUTSELECT
+f[0] <= f.DB_MAX_OUTPUT_PORT_TYPE
+f[1] <= f.DB_MAX_OUTPUT_PORT_TYPE
+f[2] <= f.DB_MAX_OUTPUT_PORT_TYPE
+f[3] <= f.DB_MAX_OUTPUT_PORT_TYPE
+
+

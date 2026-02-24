@@ -1,0 +1,19 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY MUX_4_TO1 IS
+PORT (
+ A0, A1, A2, A3: IN STD_LOGIC_VECTOR(3 DOWNTO 0 );
+ s: IN STD_LOGIC_VECTOR(1 DOWNTO 0 );
+ f: OUT STD_LOGIC_VECTOR(3 DOWNTO 0 )
+);
+END ENTITY;
+ARCHITECTURE circuit OF  MUX_4_TO1 IS
+BEGIN
+ 
+ f <= A0 when s = "00"  else
+      A1 when s = "01"  else
+      A2 when s = "10"  else
+      A3;
+ 
+END ARCHITECTURE;
