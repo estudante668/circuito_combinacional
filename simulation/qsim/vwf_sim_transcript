@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off BCD_7seg -c BCD_7seg --vector_source="C:/CI_Combinacional/Waveform5.vwf" --testbench_file="C:/CI_Combinacional/simulation/qsim/Waveform5.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off meio_somador -c meio_somador --vector_source="C:/CI_Combinacional/Waveform6.vwf" --testbench_file="C:/CI_Combinacional/simulation/qsim/Waveform6.vwf.vt"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -25,9 +25,9 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Tue Feb 24 08:36:24 2026
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off BCD_7seg -c BCD_7seg --vector_source=C:/CI_Combinacional/Waveform5.vwf --testbench_file=C:/CI_Combinacional/simulation/qsim/Waveform5.vwf.vt
-Info (119006): Selected device 5CGXFC7C7F23C8 for design "BCD_7seg"
+    Info: Processing started: Tue Feb 24 22:06:31 2026
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off meio_somador -c meio_somador --vector_source=C:/CI_Combinacional/Waveform6.vwf --testbench_file=C:/CI_Combinacional/simulation/qsim/Waveform6.vwf.vt
+Info (119006): Selected device 5CGXFC7C7F23C8 for design "meio_somador"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
 Completed successfully. 
@@ -36,7 +36,7 @@ Completed successfully.
 
 **** Generating the functional simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/CI_Combinacional/simulation/qsim/" BCD_7seg -c BCD_7seg
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/CI_Combinacional/simulation/qsim/" meio_somador -c meio_somador
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -54,14 +54,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Tue Feb 24 08:36:25 2026
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/CI_Combinacional/simulation/qsim/ BCD_7seg -c BCD_7seg
-Info (119006): Selected device 5CGXFC7C7F23C8 for design "BCD_7seg"
+    Info: Processing started: Tue Feb 24 22:06:32 2026
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/CI_Combinacional/simulation/qsim/ meio_somador -c meio_somador
+Info (119006): Selected device 5CGXFC7C7F23C8 for design "meio_somador"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file BCD_7seg.vo in folder "C:/CI_Combinacional/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file meio_somador.vo in folder "C:/CI_Combinacional/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4728 megabytes
-    Info: Processing ended: Tue Feb 24 08:36:26 2026
+    Info: Peak virtual memory: 4729 megabytes
+    Info: Processing ended: Tue Feb 24 22:06:33 2026
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -69,67 +69,66 @@ Completed successfully.
 
 **** Generating the ModelSim .do script ****
 
-C:/CI_Combinacional/simulation/qsim/BCD_7seg.do generated.
+C:/CI_Combinacional/simulation/qsim/meio_somador.do generated.
 
 Completed successfully. 
 
 **** Running the ModelSim simulation ****
 
-c:/intelfpga_lite/18.1/modelsim_ase/win32aloem//vsim -c -do BCD_7seg.do
+c:/intelfpga_lite/18.1/modelsim_ase/win32aloem//vsim -c -do meio_somador.do
 
 Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
 
 # 10.5b
 
-# do BCD_7seg.do
-
+# do meio_somador.do
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 08:36:31 on Feb 24,2026
-# vlog -work work BCD_7seg.vo 
-# -- Compiling module BCD_7seg
-
+# Start time: 22:06:34 on Feb 24,2026
+# vlog -work work meio_somador.vo 
+# -- Compiling module meio_somador
 # 
 # Top level modules:
-# 	BCD_7seg
-# End time: 08:36:31 on Feb 24,2026, Elapsed time: 0:00:00
+# 	meio_somador
+# End time: 22:06:34 on Feb 24,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 08:36:31 on Feb 24,2026
-# vlog -work work Waveform5.vwf.vt 
-# -- Compiling module BCD_7seg_vlg_vec_tst
+# Start time: 22:06:34 on Feb 24,2026
+# vlog -work work Waveform6.vwf.vt 
+
+# -- Compiling module meio_somador_vlg_vec_tst
 # 
 # Top level modules:
-# 	BCD_7seg_vlg_vec_tst
-# End time: 08:36:31 on Feb 24,2026, Elapsed time: 0:00:00
+# 	meio_somador_vlg_vec_tst
+# End time: 22:06:34 on Feb 24,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
-# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.BCD_7seg_vlg_vec_tst 
-# Start time: 08:36:32 on Feb 24,2026
-# Loading work.BCD_7seg_vlg_vec_tst
-# Loading work.BCD_7seg
+# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.meio_somador_vlg_vec_tst 
+# Start time: 22:06:34 on Feb 24,2026
+# Loading work.meio_somador_vlg_vec_tst
+# Loading work.meio_somador
 # Loading cyclonev_ver.cyclonev_io_obuf
 # Loading cyclonev_ver.cyclonev_io_ibuf
 # Loading cyclonev_ver.cyclonev_lcell_comb
 # after#25
-# ** Note: $finish    : Waveform5.vwf.vt(44)
-#    Time: 1 us  Iteration: 0  Instance: /BCD_7seg_vlg_vec_tst
-# End time: 08:36:33 on Feb 24,2026, Elapsed time: 0:00:01
+# ** Note: $finish    : Waveform6.vwf.vt(48)
+#    Time: 1 us  Iteration: 0  Instance: /meio_somador_vlg_vec_tst
+# End time: 22:06:35 on Feb 24,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/CI_Combinacional/Waveform5.vwf...
+Reading C:/CI_Combinacional/Waveform6.vwf...
 
-Reading C:/CI_Combinacional/simulation/qsim/BCD_7seg.msim.vcd...
+Reading C:/CI_Combinacional/simulation/qsim/meio_somador.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/CI_Combinacional/simulation/qsim/BCD_7seg_20260224083633.sim.vwf
+Writing the resulting VWF to C:/CI_Combinacional/simulation/qsim/meio_somador_20260224220635.sim.vwf
 
 Finished VCD to VWF conversion.
 
